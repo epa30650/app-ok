@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -211,135 +210,184 @@ const SP_BASE = "";
 
 // ── DATA ──────────────────────────────────────────────────────────────
 const DATA = {
-members: [
-{id:1,name:“Sophie Martin”,voice:“Soprano”,phone:“06 12 34 56 78”,email:“s.martin@mail.fr”,joined:“2018”,note:“Soliste principale”},
-{id:2,name:“Claire Dubois”,voice:“Soprano”,phone:“06 23 45 67 89”,email:“c.dubois@mail.fr”,joined:“2020”,note:””},
-{id:3,name:“Isabelle Roux”,voice:“Soprano”,phone:“06 34 56 78 90”,email:“i.roux@mail.fr”,joined:“2019”,note:””},
-{id:4,name:“Marie Lefebvre”,voice:“Alto”,phone:“06 45 67 89 01”,email:“m.lefebvre@mail.fr”,joined:“2016”,note:“Pianiste accompagnatrice”},
-{id:5,name:“Anne Moreau”,voice:“Alto”,phone:“06 56 78 90 12”,email:“a.moreau@mail.fr”,joined:“2021”,note:””},
-{id:6,name:“Nathalie Simon”,voice:“Alto”,phone:“06 67 89 01 23”,email:“n.simon@mail.fr”,joined:“2017”,note:””},
-{id:7,name:“Pierre Bernard”,voice:“Ténor”,phone:“06 78 90 12 34”,email:“p.bernard@mail.fr”,joined:“2015”,note:””},
-{id:8,name:“Jean-Luc Petit”,voice:“Ténor”,phone:“06 89 01 23 45”,email:“jl.petit@mail.fr”,joined:“2022”,note:””},
-{id:9,name:“François Durand”,voice:“Baryton”,phone:“06 90 12 34 56”,email:“f.durand@mail.fr”,joined:“2014”,note:“Chef de pupitre”},
-{id:10,name:“Marc Leroy”,voice:“Baryton”,phone:“06 01 23 45 67”,email:“m.leroy@mail.fr”,joined:“2019”,note:””},
-{id:11,name:“Jacques Fournier”,voice:“Basse”,phone:“06 12 34 56 79”,email:“j.fournier@mail.fr”,joined:“2013”,note:“Doyen de la chorale”},
-{id:12,name:“Robert Garcia”,voice:“Basse”,phone:“06 23 45 67 80”,email:“r.garcia@mail.fr”,joined:“2020”,note:””}
-],
-// Pour chaque pièce : renseignez pdfUrl, mp3Url, midiUrl avec les URLs SharePoint
-// Laissez “” pour désactiver le bouton correspondant
-// Exemple pdfUrl: “https://votrecooperative.sharepoint.com/:b:/s/Castelas/EXuT9…?download=1”
-pieces: [
-{id:1,title:“Requiem en ré mineur”,composer:“W.A. Mozart”,epoch:“Classique”,voices:“SATB”,difficulty:3,duration:“55 min”,status:“En apprentissage”,
-pdfUrl:””,mp3Url:””,midiUrl:””,
-tracksByVoice:{Soprano:””,Alto:””,Ténor:””,Baryton:””,Basse:””}},
-{id:2,title:“Cantique de Jean Racine”,composer:“G. Fauré”,epoch:“Romantique”,voices:“SATB”,difficulty:2,duration:“5 min”,status:“Maîtrisé”,
-pdfUrl:””,mp3Url:””,midiUrl:””,
-tracksByVoice:{Soprano:””,Alto:””,Ténor:””,Baryton:””,Basse:””}},
-{id:3,title:“O Fortuna”,composer:“C. Orff”,epoch:“Contemporain”,voices:“SATB”,difficulty:3,duration:“2’45”,status:“En apprentissage”,
-pdfUrl:””,mp3Url:””,midiUrl:””,
-tracksByVoice:{Soprano:””,Alto:””,Ténor:””,Baryton:””,Basse:””}},
-{id:4,title:“Ave Maria”,composer:“F. Schubert”,epoch:“Romantique”,voices:“SSA”,difficulty:2,duration:“4 min”,status:“Maîtrisé”,
-pdfUrl:””,mp3Url:””,midiUrl:””,
-tracksByVoice:{Soprano:””,Alto:””}},
-{id:5,title:“Lux Aeterna”,composer:“E. Whitacre”,epoch:“Contemporain”,voices:“SSAATTBB”,difficulty:4,duration:“7 min”,status:“À travailler”,
-pdfUrl:””,mp3Url:””,midiUrl:””,tracksByVoice:{}},
-{id:6,title:“Gloria”,composer:“A. Vivaldi”,epoch:“Baroque”,voices:“SATB”,difficulty:3,duration:“35 min”,status:“Maîtrisé”,
-pdfUrl:””,mp3Url:””,midiUrl:””,
-tracksByVoice:{Soprano:””,Alto:””,Ténor:””,Baryton:””,Basse:””}}
-],
-events:[
-{id:1,title:“Concert de Printemps”,date:“2026-04-11”,time:“20h30”,location:“Salle Jean Galia — Rochefort-du-Gard”,type:“concert”,desc:“Concert annuel de printemps. Tenue de scène obligatoire.”},
-{id:2,title:“Répétition hebdomadaire”,date:“2026-04-15”,time:“20h00”,location:“Salle des fêtes de Rochefort”,type:“repetition”,desc:“Travail sur le Requiem de Mozart, acte II.”},
-{id:3,title:“Répétition hebdomadaire”,date:“2026-04-22”,time:“20h00”,location:“Salle des fêtes de Rochefort”,type:“repetition”,desc:“Préparation concert de mai.”},
-{id:4,title:“Concert de la Saint-Jean”,date:“2026-06-21”,time:“18h00”,location:“Église Saint-Étienne — Villeneuve-lès-Avignon”,type:“concert”,desc:“Concert en plein air. Prévoir tenue légère.”},
-{id:5,title:“Assemblée Générale”,date:“2026-09-05”,time:“10h00”,location:“Salle des fêtes de Rochefort”,type:“ag”,desc:“Bilan de saison, élection du bureau.”}
-],
-presences:{
-1:{1:“present”,2:“present”,3:“absent”,4:“present”,5:“present”,6:“unknown”,7:“present”,8:“absent”,9:“present”,10:“present”,11:“present”,12:“unknown”},
-2:{1:“present”,2:“unknown”,3:“present”,4:“present”,5:“absent”,6:“present”,7:“present”,8:“present”,9:“absent”,10:“present”,11:“unknown”,12:“present”}
-},
-messages:[
-{id:1,author:“François Durand”,me:false,time:“Hier 18h42”,text:“N’oubliez pas le concert de demain soir ! Rendez-vous à 19h30 pour l’habillage. Tenue de scène obligatoire 🎶”,pinned:true},
-{id:2,author:“Sophie Martin”,me:false,time:“Hier 20h15”,text:“Super, j’ai hâte ! Est-ce qu’on peut garer au parking de la salle ?”},
-{id:3,author:“Moi”,me:true,time:“Hier 20h32”,text:“Oui parking gratuit derrière la salle Jean Galia.”},
-{id:4,author:“Marie Lefebvre”,me:false,time:“Auj. 09h10”,text:“Quelqu’un peut me passer la partition de la 2e pièce ? J’ai oublié la mienne chez moi 😅”},
-{id:5,author:“Moi”,me:true,time:“Auj. 09h45”,text:“Je l’ai en double, je t’en apporte une ce soir !”}
-]
+  members: [
+    {id:1,name:"Sophie Martin",voice:"Soprano",phone:"06 12 34 56 78",email:"s.martin@mail.fr",joined:"2018",note:"Soliste principale"},
+    {id:2,name:"Claire Dubois",voice:"Soprano",phone:"06 23 45 67 89",email:"c.dubois@mail.fr",joined:"2020",note:""},
+    {id:3,name:"Isabelle Roux",voice:"Soprano",phone:"06 34 56 78 90",email:"i.roux@mail.fr",joined:"2019",note:""},
+    {id:4,name:"Marie Lefebvre",voice:"Alto",phone:"06 45 67 89 01",email:"m.lefebvre@mail.fr",joined:"2016",note:"Pianiste accompagnatrice"},
+    {id:5,name:"Anne Moreau",voice:"Alto",phone:"06 56 78 90 12",email:"a.moreau@mail.fr",joined:"2021",note:""},
+    {id:6,name:"Nathalie Simon",voice:"Alto",phone:"06 67 89 01 23",email:"n.simon@mail.fr",joined:"2017",note:""},
+    {id:7,name:"Pierre Bernard",voice:"Ténor",phone:"06 78 90 12 34",email:"p.bernard@mail.fr",joined:"2015",note:""},
+    {id:8,name:"Jean-Luc Petit",voice:"Ténor",phone:"06 89 01 23 45",email:"jl.petit@mail.fr",joined:"2022",note:""},
+    {id:9,name:"François Durand",voice:"Baryton",phone:"06 90 12 34 56",email:"f.durand@mail.fr",joined:"2014",note:"Chef de pupitre"},
+    {id:10,name:"Marc Leroy",voice:"Baryton",phone:"06 01 23 45 67",email:"m.leroy@mail.fr",joined:"2019",note:""},
+    {id:11,name:"Jacques Fournier",voice:"Basse",phone:"06 12 34 56 79",email:"j.fournier@mail.fr",joined:"2013",note:"Doyen de la chorale"},
+    {id:12,name:"Robert Garcia",voice:"Basse",phone:"06 23 45 67 80",email:"r.garcia@mail.fr",joined:"2020",note:""}
+  ],
+  // Pour chaque pièce : renseignez pdfUrl, mp3Url, midiUrl avec les URLs SharePoint
+  // Laissez "" pour désactiver le bouton correspondant
+  // Exemple pdfUrl: "https://votrecooperative.sharepoint.com/:b:/s/Castelas/EXuT9...?download=1"
+  pieces: [
+    {id:1,title:"Requiem en ré mineur",composer:"W.A. Mozart",epoch:"Classique",voices:"SATB",difficulty:3,duration:"55 min",status:"En apprentissage",
+     pdfUrl:"",mp3Url:"",midiUrl:"",
+     tracksByVoice:{Soprano:"",Alto:"",Ténor:"",Baryton:"",Basse:""}},
+    {id:2,title:"Cantique de Jean Racine",composer:"G. Fauré",epoch:"Romantique",voices:"SATB",difficulty:2,duration:"5 min",status:"Maîtrisé",
+     pdfUrl:"",mp3Url:"",midiUrl:"",
+     tracksByVoice:{Soprano:"",Alto:"",Ténor:"",Baryton:"",Basse:""}},
+    {id:3,title:"O Fortuna",composer:"C. Orff",epoch:"Contemporain",voices:"SATB",difficulty:3,duration:"2'45",status:"En apprentissage",
+     pdfUrl:"",mp3Url:"",midiUrl:"",
+     tracksByVoice:{Soprano:"",Alto:"",Ténor:"",Baryton:"",Basse:""}},
+    {id:4,title:"Ave Maria",composer:"F. Schubert",epoch:"Romantique",voices:"SSA",difficulty:2,duration:"4 min",status:"Maîtrisé",
+     pdfUrl:"",mp3Url:"",midiUrl:"",
+     tracksByVoice:{Soprano:"",Alto:""}},
+    {id:5,title:"Lux Aeterna",composer:"E. Whitacre",epoch:"Contemporain",voices:"SSAATTBB",difficulty:4,duration:"7 min",status:"À travailler",
+     pdfUrl:"",mp3Url:"",midiUrl:"",tracksByVoice:{}},
+    {id:6,title:"Gloria",composer:"A. Vivaldi",epoch:"Baroque",voices:"SATB",difficulty:3,duration:"35 min",status:"Maîtrisé",
+     pdfUrl:"",mp3Url:"",midiUrl:"",
+     tracksByVoice:{Soprano:"",Alto:"",Ténor:"",Baryton:"",Basse:""}}
+  ],
+  events:[
+    {id:1,title:"Concert de Printemps",date:"2026-04-11",time:"20h30",location:"Salle Jean Galia — Rochefort-du-Gard",type:"concert",desc:"Concert annuel de printemps. Tenue de scène obligatoire."},
+    {id:2,title:"Répétition hebdomadaire",date:"2026-04-15",time:"20h00",location:"Salle des fêtes de Rochefort",type:"repetition",desc:"Travail sur le Requiem de Mozart, acte II."},
+    {id:3,title:"Répétition hebdomadaire",date:"2026-04-22",time:"20h00",location:"Salle des fêtes de Rochefort",type:"repetition",desc:"Préparation concert de mai."},
+    {id:4,title:"Concert de la Saint-Jean",date:"2026-06-21",time:"18h00",location:"Église Saint-Étienne — Villeneuve-lès-Avignon",type:"concert",desc:"Concert en plein air. Prévoir tenue légère."},
+    {id:5,title:"Assemblée Générale",date:"2026-09-05",time:"10h00",location:"Salle des fêtes de Rochefort",type:"ag",desc:"Bilan de saison, élection du bureau."}
+  ],
+  presences:{
+    1:{1:"present",2:"present",3:"absent",4:"present",5:"present",6:"unknown",7:"present",8:"absent",9:"present",10:"present",11:"present",12:"unknown"},
+    2:{1:"present",2:"unknown",3:"present",4:"present",5:"absent",6:"present",7:"present",8:"present",9:"absent",10:"present",11:"unknown",12:"present"}
+  },
+  messages:[
+    {id:1,author:"François Durand",me:false,time:"Hier 18h42",text:"N'oubliez pas le concert de demain soir ! Rendez-vous à 19h30 pour l'habillage. Tenue de scène obligatoire 🎶",pinned:true},
+    {id:2,author:"Sophie Martin",me:false,time:"Hier 20h15",text:"Super, j'ai hâte ! Est-ce qu'on peut garer au parking de la salle ?"},
+    {id:3,author:"Moi",me:true,time:"Hier 20h32",text:"Oui parking gratuit derrière la salle Jean Galia."},
+    {id:4,author:"Marie Lefebvre",me:false,time:"Auj. 09h10",text:"Quelqu'un peut me passer la partition de la 2e pièce ? J'ai oublié la mienne chez moi 😅"},
+    {id:5,author:"Moi",me:true,time:"Auj. 09h45",text:"Je l'ai en double, je t'en apporte une ce soir !"}
+  ]
 };
 
 // ── STATE ─────────────────────────────────────────────────────────────
 let presenceState=JSON.parse(JSON.stringify(DATA.presences));
-let currentView=‘dashboard’;
+let currentView='dashboard';
 let selectedPresenceEvent=1;
-let messages=[…DATA.messages];
+let messages=[...DATA.messages];
 let audioElements={};
 let midiSynth=null,midiPlaying=false,currentTempo=100;
 let pdfDoc=null,pdfPage=1,pdfZoom=1.0;
 
 // ── NAVIGATE ──────────────────────────────────────────────────────────
 function navigate(view){
-stopAllMedia();
-document.querySelectorAll(’.view’).forEach(v=>v.style.display=‘none’);
-document.querySelectorAll(’.nav-btn’).forEach(b=>b.classList.remove(‘active’));
-document.getElementById(‘view-’+view).style.display=‘block’;
-document.getElementById(‘nav-’+(view===‘presences’?‘planning’:view))?.classList.add(‘active’);
-currentView=view; renderView(view);
-const el=document.getElementById(‘view-’+view); if(el) el.scrollTop=0;
+  stopAllMedia();
+  document.querySelectorAll('.view').forEach(v=>v.style.display='none');
+  document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('view-'+view).style.display='block';
+  document.getElementById('nav-'+(view==='presences'?'planning':view))?.classList.add('active');
+  currentView=view; renderView(view);
+  const el=document.getElementById('view-'+view); if(el) el.scrollTop=0;
 }
 function renderView(v){({dashboard:renderDashboard,membres:renderMembres,repertoire:renderRepertoire,planning:renderPlanning,presences:renderPresences,messages:renderMessages})[v]?.();}
 
 // ── DASHBOARD ─────────────────────────────────────────────────────────
 function renderDashboard(){
-const nxt=DATA.events[0];
-const np=Object.values(presenceState[nxt.id]||{}).filter(v=>v===‘present’).length;
-const ann=DATA.messages.filter(m=>m.pinned);
-document.getElementById(‘view-dashboard’).innerHTML=` <div class="app-header"><h1><em>Ensemble Vocal</em> du Castelas</h1><div class="subtitle">Tableau de bord</div></div> <div class="next-event" onclick="showEventDetail(${nxt.id})"> <div class="label">Prochain événement</div> <div class="title">${nxt.title}</div> <div class="date">📅 ${fmtDate(nxt.date)} — ${nxt.time} | 📍 ${nxt.location.split('—')[0].trim()}</div> </div> <div class="dash-grid"> <div class="stat-card"><div class="stat-num">${DATA.members.length}</div><div class="stat-label">Choristes</div></div> <div class="stat-card"><div class="stat-num">${np}</div><div class="stat-label">Présents soir</div></div> <div class="stat-card"><div class="stat-num">${DATA.pieces.length}</div><div class="stat-label">Œuvres</div></div> <div class="stat-card"><div class="stat-num">${DATA.events.length}</div><div class="stat-label">Événements</div></div> </div> <div class="section"><div class="section-title">Annonces <span class="count">${ann.length}</span></div></div> ${ann.map(m=>`<div class="announce-card" onclick="navigate('messages')">
-<div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-weight:600;font-size:14px"><span class="badge-unread"></span>${m.author}</span><span style="font-size:11px;color:var(--text-muted)">${m.time}</span></div>
-<div style="font-size:13px;color:var(--text-muted);line-height:1.5">${m.text}</div></div>`).join('')} <div class="section" style="margin-top:8px"><div class="section-title">Prochaines dates</div></div> ${DATA.events.slice(0,3).map(ev=>evCardHTML(ev)).join('')}`;
+  const nxt=DATA.events[0];
+  const np=Object.values(presenceState[nxt.id]||{}).filter(v=>v==='present').length;
+  const ann=DATA.messages.filter(m=>m.pinned);
+  document.getElementById('view-dashboard').innerHTML=`
+    <div class="app-header"><h1><em>Ensemble Vocal</em> du Castelas</h1><div class="subtitle">Tableau de bord</div></div>
+    <div class="next-event" onclick="showEventDetail(${nxt.id})">
+      <div class="label">Prochain événement</div>
+      <div class="title">${nxt.title}</div>
+      <div class="date">📅 ${fmtDate(nxt.date)} — ${nxt.time} | 📍 ${nxt.location.split('—')[0].trim()}</div>
+    </div>
+    <div class="dash-grid">
+      <div class="stat-card"><div class="stat-num">${DATA.members.length}</div><div class="stat-label">Choristes</div></div>
+      <div class="stat-card"><div class="stat-num">${np}</div><div class="stat-label">Présents soir</div></div>
+      <div class="stat-card"><div class="stat-num">${DATA.pieces.length}</div><div class="stat-label">Œuvres</div></div>
+      <div class="stat-card"><div class="stat-num">${DATA.events.length}</div><div class="stat-label">Événements</div></div>
+    </div>
+    <div class="section"><div class="section-title">Annonces <span class="count">${ann.length}</span></div></div>
+    ${ann.map(m=>`<div class="announce-card" onclick="navigate('messages')">
+      <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-weight:600;font-size:14px"><span class="badge-unread"></span>${m.author}</span><span style="font-size:11px;color:var(--text-muted)">${m.time}</span></div>
+      <div style="font-size:13px;color:var(--text-muted);line-height:1.5">${m.text}</div></div>`).join('')}
+    <div class="section" style="margin-top:8px"><div class="section-title">Prochaines dates</div></div>
+    ${DATA.events.slice(0,3).map(ev=>evCardHTML(ev)).join('')}`;
 }
 
 // ── MEMBRES ───────────────────────────────────────────────────────────
 function renderMembres(){
-const voices=[…new Set(DATA.members.map(m=>m.voice))];
-document.getElementById(‘view-membres’).innerHTML=` <div class="app-header"><h1>Choristes</h1><div class="subtitle">${DATA.members.length} membres</div></div> <div class="search-bar"><span class="search-icon">🔍</span><input type="text" placeholder="Rechercher…" oninput="filterMembers(this.value)"></div> <div id="members-list">${voices.map(v=>`
-<div class="voice-label">${v} <span style="color:var(--text-muted)">(${DATA.members.filter(m=>m.voice===v).length})</span></div>
-${DATA.members.filter(m=>m.voice===v).map(m=>mbrCardHTML(m)).join(’’)}`).join('')} </div><button class="fab" onclick="showAddMember()">➕</button>`;
+  const voices=[...new Set(DATA.members.map(m=>m.voice))];
+  document.getElementById('view-membres').innerHTML=`
+    <div class="app-header"><h1>Choristes</h1><div class="subtitle">${DATA.members.length} membres</div></div>
+    <div class="search-bar"><span class="search-icon">🔍</span><input type="text" placeholder="Rechercher…" oninput="filterMembers(this.value)"></div>
+    <div id="members-list">${voices.map(v=>`
+      <div class="voice-label">${v} <span style="color:var(--text-muted)">(${DATA.members.filter(m=>m.voice===v).length})</span></div>
+      ${DATA.members.filter(m=>m.voice===v).map(m=>mbrCardHTML(m)).join('')}`).join('')}
+    </div><button class="fab" onclick="showAddMember()">➕</button>`;
 }
 function mbrCardHTML(m){return`<div class="member-card" onclick="showMemberDetail(${m.id})"><div class="avatar">${m.name.split(' ').map(n=>n[0]).join('')}</div><div class="member-info"><div class="member-name">${m.name}</div><div class="member-meta">${m.voice} · Depuis ${m.joined}${m.note?' · '+m.note:''}</div></div><div class="presence-dot dot-unknown"></div></div>`;}
-function filterMembers(q){if(q.length<2){renderMembres();return;}const c=document.getElementById(‘members-list’);if(c)c.innerHTML=DATA.members.filter(m=>m.name.toLowerCase().includes(q.toLowerCase())||m.voice.toLowerCase().includes(q.toLowerCase())).map(m=>mbrCardHTML(m)).join(’’)||’<p style="text-align:center;color:var(--text-muted);padding:20px">Aucun résultat</p>’;}
+function filterMembers(q){if(q.length<2){renderMembres();return;}const c=document.getElementById('members-list');if(c)c.innerHTML=DATA.members.filter(m=>m.name.toLowerCase().includes(q.toLowerCase())||m.voice.toLowerCase().includes(q.toLowerCase())).map(m=>mbrCardHTML(m)).join('')||'<p style="text-align:center;color:var(--text-muted);padding:20px">Aucun résultat</p>';}
 function showMemberDetail(id){
-const m=DATA.members.find(x=>x.id===id);if(!m)return;
-const ep=Object.entries(presenceState).map(([eid,pr])=>{const ev=DATA.events.find(e=>e.id==eid);const s=pr[id]||‘unknown’;return ev?`<div class="detail-row"><span class="detail-icon">${s==='present'?'✅':s==='absent'?'❌':'❓'}</span><div><div class="detail-label">${fmtDate(ev.date)}</div><div class="detail-val">${ev.title}</div></div></div>`:’’}).join(’’);
-openModal(`<div style="display:flex;align-items:center;gap:14px;margin-bottom:20px"><div class="avatar" style="width:56px;height:56px;font-size:24px">${m.name.split(' ').map(n=>n[0]).join('')}</div><div><h2 style="margin-bottom:2px">${m.name}</h2><div style="color:var(--gold);font-size:13px">${m.voice}</div></div></div> <div class="detail-row"><span class="detail-icon">📞</span><div><div class="detail-label">Téléphone</div><div class="detail-val"><a href="tel:${m.phone}" style="color:var(--gold-light)">${m.phone}</a></div></div></div> <div class="detail-row"><span class="detail-icon">✉️</span><div><div class="detail-label">Email</div><div class="detail-val"><a href="mailto:${m.email}" style="color:var(--gold-light)">${m.email}</a></div></div></div> <div class="detail-row"><span class="detail-icon">📅</span><div><div class="detail-label">Membre depuis</div><div class="detail-val">${m.joined}</div></div></div> ${m.note?`<div class="detail-row"><span class="detail-icon">💬</span><div><div class="detail-label">Note</div><div class="detail-val">${m.note}</div></div></div>`:''} <div style="margin-top:16px"><div class="section-title" style="font-size:16px">Historique présences</div>${ep||'<p style="color:var(--text-muted);font-size:13px">Aucun enregistrement</p>'}</div>`);
+  const m=DATA.members.find(x=>x.id===id);if(!m)return;
+  const ep=Object.entries(presenceState).map(([eid,pr])=>{const ev=DATA.events.find(e=>e.id==eid);const s=pr[id]||'unknown';return ev?`<div class="detail-row"><span class="detail-icon">${s==='present'?'✅':s==='absent'?'❌':'❓'}</span><div><div class="detail-label">${fmtDate(ev.date)}</div><div class="detail-val">${ev.title}</div></div></div>`:''}).join('');
+  openModal(`<div style="display:flex;align-items:center;gap:14px;margin-bottom:20px"><div class="avatar" style="width:56px;height:56px;font-size:24px">${m.name.split(' ').map(n=>n[0]).join('')}</div><div><h2 style="margin-bottom:2px">${m.name}</h2><div style="color:var(--gold);font-size:13px">${m.voice}</div></div></div>
+    <div class="detail-row"><span class="detail-icon">📞</span><div><div class="detail-label">Téléphone</div><div class="detail-val"><a href="tel:${m.phone}" style="color:var(--gold-light)">${m.phone}</a></div></div></div>
+    <div class="detail-row"><span class="detail-icon">✉️</span><div><div class="detail-label">Email</div><div class="detail-val"><a href="mailto:${m.email}" style="color:var(--gold-light)">${m.email}</a></div></div></div>
+    <div class="detail-row"><span class="detail-icon">📅</span><div><div class="detail-label">Membre depuis</div><div class="detail-val">${m.joined}</div></div></div>
+    ${m.note?`<div class="detail-row"><span class="detail-icon">💬</span><div><div class="detail-label">Note</div><div class="detail-val">${m.note}</div></div></div>`:''}
+    <div style="margin-top:16px"><div class="section-title" style="font-size:16px">Historique présences</div>${ep||'<p style="color:var(--text-muted);font-size:13px">Aucun enregistrement</p>'}</div>`);
 }
 
 // ── RÉPERTOIRE ────────────────────────────────────────────────────────
 function renderRepertoire(){
-const statuses=[‘Maîtrisé’,‘En apprentissage’,‘À travailler’];
-document.getElementById(‘view-repertoire’).innerHTML=` <div class="app-header"><h1>Répertoire</h1><div class="subtitle">${DATA.pieces.length} œuvres</div></div> <div class="search-bar"><span class="search-icon">🔍</span><input type="text" placeholder="Titre, compositeur…"></div> ${statuses.map(s=>{const ps=DATA.pieces.filter(p=>p.status===s);return ps.length?`<div class="section"><div class="section-title">${s} <span class="count">${ps.length}</span></div></div>${ps.map(p=>pieceCardHTML(p)).join(’’)}`:''}).join('')} <button class="fab" onclick="showAddPiece()">➕</button>`;
+  const statuses=['Maîtrisé','En apprentissage','À travailler'];
+  document.getElementById('view-repertoire').innerHTML=`
+    <div class="app-header"><h1>Répertoire</h1><div class="subtitle">${DATA.pieces.length} œuvres</div></div>
+    <div class="search-bar"><span class="search-icon">🔍</span><input type="text" placeholder="Titre, compositeur…"></div>
+    ${statuses.map(s=>{const ps=DATA.pieces.filter(p=>p.status===s);return ps.length?`<div class="section"><div class="section-title">${s} <span class="count">${ps.length}</span></div></div>${ps.map(p=>pieceCardHTML(p)).join('')}`:''}).join('')}
+    <button class="fab" onclick="showAddPiece()">➕</button>`;
 }
 function pieceCardHTML(p){
-const stars=‘★’.repeat(p.difficulty)+‘☆’.repeat(4-p.difficulty);
-return`<div class="piece-card" onclick="showPieceDetail(${p.id})"> <div class="piece-title">${p.title}</div><div class="piece-composer">${p.composer}</div> <div class="piece-meta">${p.epoch} · ${p.duration} · ${stars}</div> <div class="piece-tags"> <span class="tag voice">${p.voices}</span><span class="tag">${p.status}</span> ${p.pdfUrl?'<span class="tag has-pdf">📄 PDF</span>':''} ${p.mp3Url?'<span class="tag has-mp3">🎵 MP3</span>':''} ${p.midiUrl?'<span class="tag has-midi">🎹 MIDI</span>':''} </div></div>`;}
+  const stars='★'.repeat(p.difficulty)+'☆'.repeat(4-p.difficulty);
+  return`<div class="piece-card" onclick="showPieceDetail(${p.id})">
+    <div class="piece-title">${p.title}</div><div class="piece-composer">${p.composer}</div>
+    <div class="piece-meta">${p.epoch} · ${p.duration} · ${stars}</div>
+    <div class="piece-tags">
+      <span class="tag voice">${p.voices}</span><span class="tag">${p.status}</span>
+      ${p.pdfUrl?'<span class="tag has-pdf">📄 PDF</span>':''}
+      ${p.mp3Url?'<span class="tag has-mp3">🎵 MP3</span>':''}
+      ${p.midiUrl?'<span class="tag has-midi">🎹 MIDI</span>':''}
+    </div></div>`;}
 
 function showPieceDetail(id){
-const p=DATA.pieces.find(x=>x.id===id);if(!p)return;
-const stars=‘★’.repeat(p.difficulty)+‘☆’.repeat(4-p.difficulty);
-openModal(` <h2>${p.title}</h2> <div style="color:var(--gold);font-size:15px;margin-bottom:16px">${p.composer}</div> <div class="detail-row"><span class="detail-icon">🎼</span><div><div class="detail-label">Époque</div><div class="detail-val">${p.epoch}</div></div></div> <div class="detail-row"><span class="detail-icon">🎤</span><div><div class="detail-label">Voix</div><div class="detail-val">${p.voices}</div></div></div> <div class="detail-row"><span class="detail-icon">⏱</span><div><div class="detail-label">Durée</div><div class="detail-val">${p.duration}</div></div></div> <div class="detail-row"><span class="detail-icon">⭐</span><div><div class="detail-label">Difficulté</div><div class="detail-val">${stars}</div></div></div> <div class="detail-row"><span class="detail-icon">📊</span><div><div class="detail-label">Statut</div><div class="detail-val">${p.status}</div></div></div> <div style="margin-top:20px">${buildAllMedia(p)}</div>`);
-if(p.pdfUrl) setTimeout(()=>loadPdf(p.pdfUrl,p.title),100);
+  const p=DATA.pieces.find(x=>x.id===id);if(!p)return;
+  const stars='★'.repeat(p.difficulty)+'☆'.repeat(4-p.difficulty);
+  openModal(`
+    <h2>${p.title}</h2>
+    <div style="color:var(--gold);font-size:15px;margin-bottom:16px">${p.composer}</div>
+    <div class="detail-row"><span class="detail-icon">🎼</span><div><div class="detail-label">Époque</div><div class="detail-val">${p.epoch}</div></div></div>
+    <div class="detail-row"><span class="detail-icon">🎤</span><div><div class="detail-label">Voix</div><div class="detail-val">${p.voices}</div></div></div>
+    <div class="detail-row"><span class="detail-icon">⏱</span><div><div class="detail-label">Durée</div><div class="detail-val">${p.duration}</div></div></div>
+    <div class="detail-row"><span class="detail-icon">⭐</span><div><div class="detail-label">Difficulté</div><div class="detail-val">${stars}</div></div></div>
+    <div class="detail-row"><span class="detail-icon">📊</span><div><div class="detail-label">Statut</div><div class="detail-val">${p.status}</div></div></div>
+    <div style="margin-top:20px">${buildAllMedia(p)}</div>`);
+  if(p.pdfUrl) setTimeout(()=>loadPdf(p.pdfUrl,p.title),100);
 }
 
 // ── MEDIA BUILDERS ────────────────────────────────────────────────────
 function buildAllMedia(p){
-const noUrl=!p.pdfUrl&&!p.mp3Url&&!p.midiUrl&&!Object.values(p.tracksByVoice||{}).some(v=>v);
-return ` ${p.pdfUrl?buildPdfViewer(p):''} ${p.mp3Url?`<div style="margin-top:${p.pdfUrl?'20px':'0'}">`+buildMp3Player(p)+'</div>':''} ${Object.values(p.tracksByVoice||{}).some(v=>v)?'<div style="margin-top:14px">'+buildVoiceTracks(p)+'</div>':''} ${p.midiUrl?'<div style="margin-top:14px">'+buildMidiPlayer(p)+'</div>':''} ${noUrl?buildUrlTester(p):''}`;
+  const noUrl=!p.pdfUrl&&!p.mp3Url&&!p.midiUrl&&!Object.values(p.tracksByVoice||{}).some(v=>v);
+  return `
+    ${p.pdfUrl?buildPdfViewer(p):''}
+    ${p.mp3Url?`<div style="margin-top:${p.pdfUrl?'20px':'0'}">`+buildMp3Player(p)+'</div>':''}
+    ${Object.values(p.tracksByVoice||{}).some(v=>v)?'<div style="margin-top:14px">'+buildVoiceTracks(p)+'</div>':''}
+    ${p.midiUrl?'<div style="margin-top:14px">'+buildMidiPlayer(p)+'</div>':''}
+    ${noUrl?buildUrlTester(p):''}`;
 }
 
 function buildUrlTester(p){
-return`<div class="sp-config">
-<div class="sp-icon">📁</div>
-<p>Aucune ressource configurée.<br>Renseignez les URLs dans <strong>DATA.pieces</strong> ou testez directement :</p>
-
+  return`<div class="sp-config">
+    <div class="sp-icon">📁</div>
+    <p>Aucune ressource configurée.<br>Renseignez les URLs dans <strong>DATA.pieces</strong> ou testez directement :</p>
   </div>
   <div style="display:flex;flex-direction:column;gap:10px;margin-top:12px">
     <div><div style="font-size:11px;color:var(--text-muted);margin-bottom:4px">URL PDF (SharePoint)</div>
@@ -353,19 +401,18 @@ return`<div class="sp-config">
 }
 
 function testUrl(type,pid){
-const p=DATA.pieces.find(x=>x.id===pid);
-const url=document.getElementById(‘t-’+type)?.value.trim();
-if(!url||!p)return;
-const area=document.getElementById(‘test-area’);
-if(!area)return;
-if(type===‘pdf’){area.innerHTML=buildPdfViewer({…p,pdfUrl:url});setTimeout(()=>loadPdf(url,p.title),100);}
-else if(type===‘mp3’){area.innerHTML=buildMp3Player({…p,mp3Url:url,pdfUrl:’’});}
-else if(type===‘midi’){area.innerHTML=buildMidiPlayer({…p,midiUrl:url});}
+  const p=DATA.pieces.find(x=>x.id===pid);
+  const url=document.getElementById('t-'+type)?.value.trim();
+  if(!url||!p)return;
+  const area=document.getElementById('test-area');
+  if(!area)return;
+  if(type==='pdf'){area.innerHTML=buildPdfViewer({...p,pdfUrl:url});setTimeout(()=>loadPdf(url,p.title),100);}
+  else if(type==='mp3'){area.innerHTML=buildMp3Player({...p,mp3Url:url,pdfUrl:''});}
+  else if(type==='midi'){area.innerHTML=buildMidiPlayer({...p,midiUrl:url});}
 }
 
 // ─ PDF ────────────────────────────────────────────────────────────────
 function buildPdfViewer(p){return`
-
   <div class="media-section-title">📄 Partition</div>
   <div class="pdf-viewer-wrap" id="pdf-wrap">
     <div class="pdf-toolbar">
@@ -381,41 +428,40 @@ function buildPdfViewer(p){return`
   </div>`;}
 
 async function loadPdf(url,title){
-if(!window.pdfjsLib){showToast(‘PDF.js non disponible’);return;}
-pdfjsLib.GlobalWorkerOptions.workerSrc=‘https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js’;
-pdfPage=1;pdfZoom=1.0;
-try{
-pdfDoc=await pdfjsLib.getDocument(url).promise;
-await renderPdfPage();
-}catch(e){
-const w=document.getElementById(‘pdf-canvas-wrap’);
-if(w)w.innerHTML=`<div class="pdf-loading" style="color:#e05252">❌ PDF inaccessible.<br><small>Vérifiez que le lien SharePoint est public ou utilisez un lien de téléchargement direct.</small><br><br><a href="${url}" target="_blank" class="btn-sm primary" style="display:inline-flex;margin-top:8px">Ouvrir dans SharePoint ↗</a></div>`;
-}
+  if(!window.pdfjsLib){showToast('PDF.js non disponible');return;}
+  pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  pdfPage=1;pdfZoom=1.0;
+  try{
+    pdfDoc=await pdfjsLib.getDocument(url).promise;
+    await renderPdfPage();
+  }catch(e){
+    const w=document.getElementById('pdf-canvas-wrap');
+    if(w)w.innerHTML=`<div class="pdf-loading" style="color:#e05252">❌ PDF inaccessible.<br><small>Vérifiez que le lien SharePoint est public ou utilisez un lien de téléchargement direct.</small><br><br><a href="${url}" target="_blank" class="btn-sm primary" style="display:inline-flex;margin-top:8px">Ouvrir dans SharePoint ↗</a></div>`;
+  }
 }
 
 async function renderPdfPage(){
-if(!pdfDoc)return;
-const w=document.getElementById(‘pdf-canvas-wrap’),info=document.getElementById(‘pdf-page-info’);
-if(!w)return;
-w.innerHTML=’<div class="pdf-loading"><div class="spinner"></div></div>’;
-const page=await pdfDoc.getPage(pdfPage);
-const scale=pdfZoom*(w.clientWidth/page.getViewport({scale:1}).width);
-const vp=page.getViewport({scale});
-const canvas=document.createElement(‘canvas’);
-canvas.width=vp.width;canvas.height=vp.height;
-w.innerHTML=’’;w.appendChild(canvas);
-await page.render({canvasContext:canvas.getContext(‘2d’),viewport:vp}).promise;
-if(info)info.textContent=`${pdfPage} / ${pdfDoc.numPages}`;
-const prev=document.getElementById(‘pdf-prev’),next=document.getElementById(‘pdf-next’);
-if(prev)prev.disabled=pdfPage<=1;
-if(next)next.disabled=pdfPage>=pdfDoc.numPages;
+  if(!pdfDoc)return;
+  const w=document.getElementById('pdf-canvas-wrap'),info=document.getElementById('pdf-page-info');
+  if(!w)return;
+  w.innerHTML='<div class="pdf-loading"><div class="spinner"></div></div>';
+  const page=await pdfDoc.getPage(pdfPage);
+  const scale=pdfZoom*(w.clientWidth/page.getViewport({scale:1}).width);
+  const vp=page.getViewport({scale});
+  const canvas=document.createElement('canvas');
+  canvas.width=vp.width;canvas.height=vp.height;
+  w.innerHTML='';w.appendChild(canvas);
+  await page.render({canvasContext:canvas.getContext('2d'),viewport:vp}).promise;
+  if(info)info.textContent=`${pdfPage} / ${pdfDoc.numPages}`;
+  const prev=document.getElementById('pdf-prev'),next=document.getElementById('pdf-next');
+  if(prev)prev.disabled=pdfPage<=1;
+  if(next)next.disabled=pdfPage>=pdfDoc.numPages;
 }
 function pdfNavPage(d){if(!pdfDoc)return;pdfPage=Math.max(1,Math.min(pdfDoc.numPages,pdfPage+d));renderPdfPage();}
 function pdfZoomChange(d){pdfZoom=Math.max(0.5,Math.min(3,pdfZoom+d));renderPdfPage();}
 
 // ─ MP3 ────────────────────────────────────────────────────────────────
 function buildMp3Player(p){return`
-
   <div class="media-section-title">🎵 Écoute complète</div>
   <div class="mp3-player">
     <div class="mp3-track-info"><span class="mp3-track-icon">🎵</span><div><div class="mp3-track-name">${p.title}</div><div class="mp3-track-sub">Chœur complet · ${p.duration}</div></div></div>
@@ -429,58 +475,58 @@ function buildMp3Player(p){return`
   </div>`;}
 
 function buildVoiceTracks(p){
-const tracks=Object.entries(p.tracksByVoice).filter(([,u])=>u);
-return`<div class="media-section-title">🎤 Par pupitre</div> <div class="voice-tracks">${tracks.map(([v,u])=>`
-<div class="voice-track"><span class="voice-track-label">${v}</span>
-<button class="voice-track-btn" id="vt-${p.id}-${v}" onclick="toggleVoiceTrack(${p.id},'${v}','${u}')">▶ Écouter</button>
-</div>`).join('')}</div>`;}
+  const tracks=Object.entries(p.tracksByVoice).filter(([,u])=>u);
+  return`<div class="media-section-title">🎤 Par pupitre</div>
+    <div class="voice-tracks">${tracks.map(([v,u])=>`
+      <div class="voice-track"><span class="voice-track-label">${v}</span>
+      <button class="voice-track-btn" id="vt-${p.id}-${v}" onclick="toggleVoiceTrack(${p.id},'${v}','${u}')">▶ Écouter</button>
+      </div>`).join('')}</div>`;}
 
 function toggleMp3(pid,url){
-const key=‘main-’+pid;
-stopVoiceTracks(pid);
-if(!audioElements[key]){
-const a=new Audio(url);
-a.addEventListener(‘timeupdate’,()=>updateMp3Prog(pid,a));
-a.addEventListener(‘ended’,()=>{const b=document.getElementById(‘mp3-btn-’+pid);if(b)b.textContent=‘▶’;});
-audioElements[key]=a;
-}
-const a=audioElements[key],btn=document.getElementById(‘mp3-btn-’+pid);
-if(a.paused){a.play().catch(()=>showToast(‘Impossible de lire le fichier’));if(btn)btn.textContent=‘⏸’;}
-else{a.pause();if(btn)btn.textContent=‘▶’;}
+  const key='main-'+pid;
+  stopVoiceTracks(pid);
+  if(!audioElements[key]){
+    const a=new Audio(url);
+    a.addEventListener('timeupdate',()=>updateMp3Prog(pid,a));
+    a.addEventListener('ended',()=>{const b=document.getElementById('mp3-btn-'+pid);if(b)b.textContent='▶';});
+    audioElements[key]=a;
+  }
+  const a=audioElements[key],btn=document.getElementById('mp3-btn-'+pid);
+  if(a.paused){a.play().catch(()=>showToast('Impossible de lire le fichier'));if(btn)btn.textContent='⏸';}
+  else{a.pause();if(btn)btn.textContent='▶';}
 }
 function toggleVoiceTrack(pid,voice,url){
-stopVoiceTracks(pid,voice);
-const key=`vt-${pid}-${voice}`,btn=document.getElementById(key);
-if(!audioElements[key]){
-const a=new Audio(url);
-a.addEventListener(‘ended’,()=>{if(btn){btn.textContent=‘▶ Écouter’;btn.classList.remove(‘playing’);}});
-audioElements[key]=a;
-}
-const a=audioElements[key];
-if(a.paused){a.play().catch(()=>showToast(‘Lecture impossible’));if(btn){btn.textContent=‘⏸ Pause’;btn.classList.add(‘playing’);}}
-else{a.pause();if(btn){btn.textContent=‘▶ Écouter’;btn.classList.remove(‘playing’);}}
+  stopVoiceTracks(pid,voice);
+  const key=`vt-${pid}-${voice}`,btn=document.getElementById(key);
+  if(!audioElements[key]){
+    const a=new Audio(url);
+    a.addEventListener('ended',()=>{if(btn){btn.textContent='▶ Écouter';btn.classList.remove('playing');}});
+    audioElements[key]=a;
+  }
+  const a=audioElements[key];
+  if(a.paused){a.play().catch(()=>showToast('Lecture impossible'));if(btn){btn.textContent='⏸ Pause';btn.classList.add('playing');}}
+  else{a.pause();if(btn){btn.textContent='▶ Écouter';btn.classList.remove('playing');}}
 }
 function stopVoiceTracks(pid,except){
-Object.entries(audioElements).forEach(([k,a])=>{
-if(k.startsWith(‘vt-’+pid+’-’)&&k!==‘vt-’+pid+’-’+(except||’**none**’)){
-a.pause();a.currentTime=0;
-const btn=document.getElementById(k);
-if(btn){btn.textContent=‘▶ Écouter’;btn.classList.remove(‘playing’);}
-}
-});
+  Object.entries(audioElements).forEach(([k,a])=>{
+    if(k.startsWith('vt-'+pid+'-')&&k!=='vt-'+pid+'-'+(except||'__none__')){
+      a.pause();a.currentTime=0;
+      const btn=document.getElementById(k);
+      if(btn){btn.textContent='▶ Écouter';btn.classList.remove('playing');}
+    }
+  });
 }
 function updateMp3Prog(pid,a){
-if(!a.duration)return;
-const prog=document.getElementById(‘mp3-prog-’+pid),time=document.getElementById(‘mp3-time-’+pid);
-if(prog)prog.value=(a.currentTime/a.duration)*100;
-if(time)time.textContent=`${fmt(a.currentTime)} / ${fmt(a.duration)}`;
+  if(!a.duration)return;
+  const prog=document.getElementById('mp3-prog-'+pid),time=document.getElementById('mp3-time-'+pid);
+  if(prog)prog.value=(a.currentTime/a.duration)*100;
+  if(time)time.textContent=`${fmt(a.currentTime)} / ${fmt(a.duration)}`;
 }
-function seekAudio(pid,val){const a=audioElements[‘main-’+pid];if(a&&a.duration)a.currentTime=(val/100)*a.duration;}
-function fmt(s){if(isNaN(s))return’0:00’;return`${Math.floor(s/60)}:${Math.floor(s%60).toString().padStart(2,'0')}`;}
+function seekAudio(pid,val){const a=audioElements['main-'+pid];if(a&&a.duration)a.currentTime=(val/100)*a.duration;}
+function fmt(s){if(isNaN(s))return'0:00';return`${Math.floor(s/60)}:${Math.floor(s%60).toString().padStart(2,'0')}`;}
 
 // ─ MIDI ───────────────────────────────────────────────────────────────
 function buildMidiPlayer(p){return`
-
   <div class="media-section-title">🎹 Lecteur MIDI</div>
   <div class="midi-player">
     <div class="midi-header"><span class="midi-icon">🎹</span>
@@ -503,164 +549,203 @@ function buildMidiPlayer(p){return`
   </div>`;}
 
 async function toggleMidi(pid,url){
-if(midiPlaying){stopMidi(pid);return;}
-midiSt(pid,‘⏳ Chargement…’);
-try{
-const buf=await fetch(url).then(r=>{if(!r.ok)throw new Error(’HTTP ’+r.status);return r.arrayBuffer();});
-const midi=parseMidi(new Uint8Array(buf));
-if(!midi)throw new Error(‘Format MIDI invalide’);
-await Tone.start();
-if(midiSynth){try{midiSynth.dispose();}catch(e){}}
-midiSynth=new Tone.PolySynth(Tone.Synth,{oscillator:{type:‘triangle’},envelope:{attack:.02,decay:.1,sustain:.5,release:.8},volume:-6}).toDestination();
-scheduleMidi(pid,midi);
-Tone.Transport.start();
-midiPlaying=true;
-const btn=document.getElementById(‘midi-play-’+pid);
-if(btn){btn.textContent=‘⏸ Pause’;btn.classList.add(‘active’);}
-midiSt(pid,‘▶ Lecture…’);
-}catch(e){midiSt(pid,’❌ ’+e.message);}
+  if(midiPlaying){stopMidi(pid);return;}
+  midiSt(pid,'⏳ Chargement…');
+  try{
+    const buf=await fetch(url).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.arrayBuffer();});
+    const midi=parseMidi(new Uint8Array(buf));
+    if(!midi)throw new Error('Format MIDI invalide');
+    await Tone.start();
+    if(midiSynth){try{midiSynth.dispose();}catch(e){}}
+    midiSynth=new Tone.PolySynth(Tone.Synth,{oscillator:{type:'triangle'},envelope:{attack:.02,decay:.1,sustain:.5,release:.8},volume:-6}).toDestination();
+    scheduleMidi(pid,midi);
+    Tone.Transport.start();
+    midiPlaying=true;
+    const btn=document.getElementById('midi-play-'+pid);
+    if(btn){btn.textContent='⏸ Pause';btn.classList.add('active');}
+    midiSt(pid,'▶ Lecture…');
+  }catch(e){midiSt(pid,'❌ '+e.message);}
 }
 
 function scheduleMidi(pid,midi){
-Tone.Transport.cancel();
-const ppq=midi.header.ticksPerBeat||480;
-let bpm=120;
-for(const tr of midi.tracks){for(const ev of tr){if(ev.type===‘setTempo’){bpm=Math.round(60000000/ev.microsec);break;}}}
-const adjBpm=bpm*(currentTempo/100);
-Tone.Transport.bpm.value=adjBpm;
-let maxEnd=0;
-for(const tr of midi.tracks){
-let ticks=0;
-for(const ev of tr){
-ticks+=ev.delta||0;
-const t=(ticks/ppq)*(60/adjBpm);
-if(ev.type===‘noteOn’&&ev.vel>0){
-const note=Tone.Frequency(ev.note,‘midi’).toNote();
-const dur=((ev.dur||ppq/4)/ppq)*(60/adjBpm);
-Tone.Transport.schedule(ts=>midiSynth?.triggerAttackRelease(note,Math.max(.05,dur),ts,ev.vel/127),t);
-maxEnd=Math.max(maxEnd,t+dur);
-}
-}
-}
-Tone.Transport.schedule(()=>stopMidi(pid),maxEnd+0.5);
+  Tone.Transport.cancel();
+  const ppq=midi.header.ticksPerBeat||480;
+  let bpm=120;
+  for(const tr of midi.tracks){for(const ev of tr){if(ev.type==='setTempo'){bpm=Math.round(60000000/ev.microsec);break;}}}
+  const adjBpm=bpm*(currentTempo/100);
+  Tone.Transport.bpm.value=adjBpm;
+  let maxEnd=0;
+  for(const tr of midi.tracks){
+    let ticks=0;
+    for(const ev of tr){
+      ticks+=ev.delta||0;
+      const t=(ticks/ppq)*(60/adjBpm);
+      if(ev.type==='noteOn'&&ev.vel>0){
+        const note=Tone.Frequency(ev.note,'midi').toNote();
+        const dur=((ev.dur||ppq/4)/ppq)*(60/adjBpm);
+        Tone.Transport.schedule(ts=>midiSynth?.triggerAttackRelease(note,Math.max(.05,dur),ts,ev.vel/127),t);
+        maxEnd=Math.max(maxEnd,t+dur);
+      }
+    }
+  }
+  Tone.Transport.schedule(()=>stopMidi(pid),maxEnd+0.5);
 }
 
 function stopMidi(pid){
-Tone.Transport.stop();Tone.Transport.cancel();
-if(midiSynth){try{midiSynth.releaseAll();}catch(e){}}
-midiPlaying=false;
-const btn=document.getElementById(‘midi-play-’+pid);
-if(btn){btn.textContent=‘▶ Lire’;btn.classList.remove(‘active’);}
-midiSt(pid,‘Arrêté’);
+  Tone.Transport.stop();Tone.Transport.cancel();
+  if(midiSynth){try{midiSynth.releaseAll();}catch(e){}}
+  midiPlaying=false;
+  const btn=document.getElementById('midi-play-'+pid);
+  if(btn){btn.textContent='▶ Lire';btn.classList.remove('active');}
+  midiSt(pid,'Arrêté');
 }
 function setTempo(pid,val){
-currentTempo=parseInt(val);
-const el=document.getElementById(‘midi-tv-’+pid);if(el)el.textContent=val+’%’;
-if(midiPlaying)Tone.Transport.bpm.value*=currentTempo/100;
+  currentTempo=parseInt(val);
+  const el=document.getElementById('midi-tv-'+pid);if(el)el.textContent=val+'%';
+  if(midiPlaying)Tone.Transport.bpm.value*=currentTempo/100;
 }
-function midiSt(pid,txt){const el=document.getElementById(‘midi-st-’+pid);if(el)el.textContent=txt;}
+function midiSt(pid,txt){const el=document.getElementById('midi-st-'+pid);if(el)el.textContent=txt;}
 
 // Minimal MIDI parser
 function parseMidi(b){
-let p=0;
-const r32=()=>{const v=(b[p]<<24)|(b[p+1]<<16)|(b[p+2]<<8)|b[p+3];p+=4;return v>>>0;};
-const r16=()=>{const v=(b[p]<<8)|b[p+1];p+=2;return v;};
-const rVL=()=>{let v=0,c;do{c=b[p++];v=(v<<7)|(c&0x7f);}while(c&0x80);return v;};
-if(String.fromCharCode(…b.slice(0,4))!==‘MThd’)return null;
-r32();const fmt=r16(),nt=r16(),tpb=r16();
-const tracks=[];
-for(let t=0;t<nt;t++){
-p+=4;const len=r32(),end=p+len,evs=[];let ls=0;
-while(p<end){
-const dt=rVL();let st=b[p];
-if(st&0x80){ls=st;p++;}else st=ls;
-const ty=st&0xf0;
-if(ty===0x90){const n=b[p++],v=b[p++];evs.push({delta:dt,type:v>0?‘noteOn’:‘noteOff’,note:n,vel:v});}
-else if(ty===0x80){const n=b[p++];p++;evs.push({delta:dt,type:‘noteOff’,note:n});}
-else if(ty===0xA0||ty===0xB0||ty===0xE0)p+=2;
-else if(ty===0xC0||ty===0xD0)p++;
-else if(st===0xFF){const mt=b[p++],ml=rVL();if(mt===0x51&&ml===3){const us=(b[p]<<16)|(b[p+1]<<8)|b[p+2];evs.push({delta:dt,type:‘setTempo’,microsec:us});}p+=ml;}
-else if(st===0xF0||st===0xF7){const l=rVL();p+=l;}
-else break;
-}
-p=end;tracks.push(evs);
-}
-return{header:{ticksPerBeat:tpb},tracks};
+  let p=0;
+  const r32=()=>{const v=(b[p]<<24)|(b[p+1]<<16)|(b[p+2]<<8)|b[p+3];p+=4;return v>>>0;};
+  const r16=()=>{const v=(b[p]<<8)|b[p+1];p+=2;return v;};
+  const rVL=()=>{let v=0,c;do{c=b[p++];v=(v<<7)|(c&0x7f);}while(c&0x80);return v;};
+  if(String.fromCharCode(...b.slice(0,4))!=='MThd')return null;
+  r32();const fmt=r16(),nt=r16(),tpb=r16();
+  const tracks=[];
+  for(let t=0;t<nt;t++){
+    p+=4;const len=r32(),end=p+len,evs=[];let ls=0;
+    while(p<end){
+      const dt=rVL();let st=b[p];
+      if(st&0x80){ls=st;p++;}else st=ls;
+      const ty=st&0xf0;
+      if(ty===0x90){const n=b[p++],v=b[p++];evs.push({delta:dt,type:v>0?'noteOn':'noteOff',note:n,vel:v});}
+      else if(ty===0x80){const n=b[p++];p++;evs.push({delta:dt,type:'noteOff',note:n});}
+      else if(ty===0xA0||ty===0xB0||ty===0xE0)p+=2;
+      else if(ty===0xC0||ty===0xD0)p++;
+      else if(st===0xFF){const mt=b[p++],ml=rVL();if(mt===0x51&&ml===3){const us=(b[p]<<16)|(b[p+1]<<8)|b[p+2];evs.push({delta:dt,type:'setTempo',microsec:us});}p+=ml;}
+      else if(st===0xF0||st===0xF7){const l=rVL();p+=l;}
+      else break;
+    }
+    p=end;tracks.push(evs);
+  }
+  return{header:{ticksPerBeat:tpb},tracks};
 }
 
 function stopAllMedia(){
-Object.values(audioElements).forEach(a=>{try{a.pause();a.currentTime=0;}catch(e){}});
-if(midiPlaying){Tone.Transport.stop();Tone.Transport.cancel();if(midiSynth){try{midiSynth.releaseAll();}catch(e){}}midiPlaying=false;}
-pdfDoc=null;
+  Object.values(audioElements).forEach(a=>{try{a.pause();a.currentTime=0;}catch(e){}});
+  if(midiPlaying){Tone.Transport.stop();Tone.Transport.cancel();if(midiSynth){try{midiSynth.releaseAll();}catch(e){}}midiPlaying=false;}
+  pdfDoc=null;
 }
 
 // ── PLANNING ──────────────────────────────────────────────────────────
 function renderPlanning(){
-const today=new Date().toISOString().split(‘T’)[0];
-const up=DATA.events.filter(e=>e.date>=today),past=DATA.events.filter(e=>e.date<today);
-document.getElementById(‘view-planning’).innerHTML=` <div class="app-header"><h1>Planning</h1><div class="subtitle">Saison 2025–2026</div></div> ${up.length?`<div class="section"><div class="section-title">À venir <span class="count">${up.length}</span></div></div>${up.map(ev=>evCardHTML(ev,true)).join(’’)}`:''} ${past.length?`<div class="section" style="margin-top:8px"><div class="section-title" style="opacity:.6">Passés</div></div>${past.map(ev=>`<div style="opacity:.5">${evCardHTML(ev,true)}</div>`).join(’’)}`:''} <button class="fab" onclick="showToast('Bientôt disponible')">➕</button>`;
+  const today=new Date().toISOString().split('T')[0];
+  const up=DATA.events.filter(e=>e.date>=today),past=DATA.events.filter(e=>e.date<today);
+  document.getElementById('view-planning').innerHTML=`
+    <div class="app-header"><h1>Planning</h1><div class="subtitle">Saison 2025–2026</div></div>
+    ${up.length?`<div class="section"><div class="section-title">À venir <span class="count">${up.length}</span></div></div>${up.map(ev=>evCardHTML(ev,true)).join('')}`:''}
+    ${past.length?`<div class="section" style="margin-top:8px"><div class="section-title" style="opacity:.6">Passés</div></div>${past.map(ev=>`<div style="opacity:.5">${evCardHTML(ev,true)}</div>`).join('')}`:''}
+    <button class="fab" onclick="showToast('Bientôt disponible')">➕</button>`;
 }
 function evCardHTML(ev,click=true){
-const d=new Date(ev.date);
-const tc={concert:‘type-concert’,repetition:‘type-repetition’,ag:‘type-ag’}[ev.type];
-const tl={concert:‘Concert’,repetition:‘Répétition’,ag:‘Assemblée’}[ev.type];
-return`<div class="event-card" onclick="${click?`showEventDetail(${ev.id})`:’’}”>
-<div class="event-date-block"><div class="event-day">${d.getDate()}</div><div class="event-month">${d.toLocaleString(‘fr-FR’,{month:‘short’})}</div></div>
-<div class="event-body"><div class="event-title">${ev.title}</div><div class="event-location">📍 ${ev.location.split(’—’)[0].trim()} · ${ev.time}</div><span class="event-type ${tc}">${tl}</span></div>
-
+  const d=new Date(ev.date);
+  const tc={concert:'type-concert',repetition:'type-repetition',ag:'type-ag'}[ev.type];
+  const tl={concert:'Concert',repetition:'Répétition',ag:'Assemblée'}[ev.type];
+  return`<div class="event-card" onclick="${click?`showEventDetail(${ev.id})`:''}">
+    <div class="event-date-block"><div class="event-day">${d.getDate()}</div><div class="event-month">${d.toLocaleString('fr-FR',{month:'short'})}</div></div>
+    <div class="event-body"><div class="event-title">${ev.title}</div><div class="event-location">📍 ${ev.location.split('—')[0].trim()} · ${ev.time}</div><span class="event-type ${tc}">${tl}</span></div>
   </div>`;}
 
 function showEventDetail(id){
-const ev=DATA.events.find(x=>x.id===id);if(!ev)return;
-const pr=presenceState[ev.id]||{};
-const nP=Object.values(pr).filter(v=>v===‘present’).length,nA=Object.values(pr).filter(v=>v===‘absent’).length;
-openModal(`<h2>${ev.title}</h2> <div class="detail-row"><span class="detail-icon">📅</span><div><div class="detail-label">Date</div><div class="detail-val">${fmtDate(ev.date)} — ${ev.time}</div></div></div> <div class="detail-row"><span class="detail-icon">📍</span><div><div class="detail-label">Lieu</div><div class="detail-val">${ev.location}</div></div></div> <div class="detail-row"><span class="detail-icon">💬</span><div><div class="detail-label">Infos</div><div class="detail-val">${ev.desc}</div></div></div> ${Object.keys(pr).length?`<div class="detail-row"><span class="detail-icon">👥</span><div><div class="detail-label">Présences</div><div class="detail-val">${nP} présents · ${nA} absents</div></div></div>`:''} <div style="display:flex;gap:10px;margin-top:20px"> <button class="btn-sm primary" onclick="closeModalFn();navigate('presences');selectedPresenceEvent=${ev.id};renderView('presences')">📋 Gérer présences</button> </div>`);
+  const ev=DATA.events.find(x=>x.id===id);if(!ev)return;
+  const pr=presenceState[ev.id]||{};
+  const nP=Object.values(pr).filter(v=>v==='present').length,nA=Object.values(pr).filter(v=>v==='absent').length;
+  openModal(`<h2>${ev.title}</h2>
+    <div class="detail-row"><span class="detail-icon">📅</span><div><div class="detail-label">Date</div><div class="detail-val">${fmtDate(ev.date)} — ${ev.time}</div></div></div>
+    <div class="detail-row"><span class="detail-icon">📍</span><div><div class="detail-label">Lieu</div><div class="detail-val">${ev.location}</div></div></div>
+    <div class="detail-row"><span class="detail-icon">💬</span><div><div class="detail-label">Infos</div><div class="detail-val">${ev.desc}</div></div></div>
+    ${Object.keys(pr).length?`<div class="detail-row"><span class="detail-icon">👥</span><div><div class="detail-label">Présences</div><div class="detail-val">${nP} présents · ${nA} absents</div></div></div>`:''}
+    <div style="display:flex;gap:10px;margin-top:20px">
+      <button class="btn-sm primary" onclick="closeModalFn();navigate('presences');selectedPresenceEvent=${ev.id};renderView('presences')">📋 Gérer présences</button>
+    </div>`);
 }
 
 // ── PRÉSENCES ─────────────────────────────────────────────────────────
 function renderPresences(){
-const ev=DATA.events.find(e=>e.id===selectedPresenceEvent)||DATA.events[0];
-if(!presenceState[ev.id])presenceState[ev.id]={};
-const pr=presenceState[ev.id];
-const c={present:0,absent:0,unknown:0};
-DATA.members.forEach(m=>c[pr[m.id]||‘unknown’]++);
-document.getElementById(‘view-presences’).innerHTML=` <div class="app-header"><h1>Présences</h1><div class="subtitle">Feuille d'émargement</div></div> <div style="padding:0 16px 12px"> <select onchange="selectedPresenceEvent=parseInt(this.value);renderView('presences')" style="width:100%;background:var(--dark3);border:1px solid var(--border);color:var(--text);padding:10px 14px;border-radius:var(--radius-sm);font-family:var(--font-sans);font-size:14px;outline:none"> ${DATA.events.map(e=>`<option value=”${e.id}” ${e.id===ev.id?‘selected’:’’}>${fmtDate(e.date)} — ${e.title}</option>`).join('')} </select> </div> <div class="presence-summary"> <div class="pres-stat"><div class="num present">${c.present}</div><div class="lbl">Présents</div></div> <div class="pres-stat"><div class="num absent">${c.absent}</div><div class="lbl">Absents</div></div> <div class="pres-stat"><div class="num unknown">${c.unknown}</div><div class="lbl">Inconnu</div></div> </div> ${[...new Set(DATA.members.map(m=>m.voice))].map(v=>`
-<div class="voice-label" style="padding:0 16px;margin-bottom:8px">${v}</div>
-${DATA.members.filter(m=>m.voice===v).map(m=>` <div class="presence-member-row"> <div class="avatar" style="width:36px;height:36px;font-size:14px">${m.name.split(' ').map(n=>n[0]).join('')}</div> <div style="flex:1"><div style="font-size:14px;font-weight:500">${m.name}</div><div style="font-size:11px;color:var(--text-muted)">${m.voice}</div></div> <div class="pres-controls"> <button class="pres-btn ${(pr[m.id]||'unknown')==='present'?'active-present':''}" onclick="setPres(${ev.id},${m.id},'present')">✅</button> <button class="pres-btn ${(pr[m.id]||'unknown')==='absent'?'active-absent':''}" onclick="setPres(${ev.id},${m.id},'absent')">❌</button> </div> </div>`).join(’’)}`).join('')}`;
+  const ev=DATA.events.find(e=>e.id===selectedPresenceEvent)||DATA.events[0];
+  if(!presenceState[ev.id])presenceState[ev.id]={};
+  const pr=presenceState[ev.id];
+  const c={present:0,absent:0,unknown:0};
+  DATA.members.forEach(m=>c[pr[m.id]||'unknown']++);
+  document.getElementById('view-presences').innerHTML=`
+    <div class="app-header"><h1>Présences</h1><div class="subtitle">Feuille d'émargement</div></div>
+    <div style="padding:0 16px 12px">
+      <select onchange="selectedPresenceEvent=parseInt(this.value);renderView('presences')"
+        style="width:100%;background:var(--dark3);border:1px solid var(--border);color:var(--text);padding:10px 14px;border-radius:var(--radius-sm);font-family:var(--font-sans);font-size:14px;outline:none">
+        ${DATA.events.map(e=>`<option value="${e.id}" ${e.id===ev.id?'selected':''}>${fmtDate(e.date)} — ${e.title}</option>`).join('')}
+      </select>
+    </div>
+    <div class="presence-summary">
+      <div class="pres-stat"><div class="num present">${c.present}</div><div class="lbl">Présents</div></div>
+      <div class="pres-stat"><div class="num absent">${c.absent}</div><div class="lbl">Absents</div></div>
+      <div class="pres-stat"><div class="num unknown">${c.unknown}</div><div class="lbl">Inconnu</div></div>
+    </div>
+    ${[...new Set(DATA.members.map(m=>m.voice))].map(v=>`
+      <div class="voice-label" style="padding:0 16px;margin-bottom:8px">${v}</div>
+      ${DATA.members.filter(m=>m.voice===v).map(m=>`
+        <div class="presence-member-row">
+          <div class="avatar" style="width:36px;height:36px;font-size:14px">${m.name.split(' ').map(n=>n[0]).join('')}</div>
+          <div style="flex:1"><div style="font-size:14px;font-weight:500">${m.name}</div><div style="font-size:11px;color:var(--text-muted)">${m.voice}</div></div>
+          <div class="pres-controls">
+            <button class="pres-btn ${(pr[m.id]||'unknown')==='present'?'active-present':''}" onclick="setPres(${ev.id},${m.id},'present')">✅</button>
+            <button class="pres-btn ${(pr[m.id]||'unknown')==='absent'?'active-absent':''}" onclick="setPres(${ev.id},${m.id},'absent')">❌</button>
+          </div>
+        </div>`).join('')}`).join('')}`;
 }
-function setPres(evId,mId,s){if(!presenceState[evId])presenceState[evId]={};presenceState[evId][mId]=presenceState[evId][mId]===s?‘unknown’:s;renderView(‘presences’);}
+function setPres(evId,mId,s){if(!presenceState[evId])presenceState[evId]={};presenceState[evId][mId]=presenceState[evId][mId]===s?'unknown':s;renderView('presences');}
 
 // ── MESSAGES ──────────────────────────────────────────────────────────
 function renderMessages(){
-const pin=messages.find(m=>m.pinned);
-document.getElementById(‘view-messages’).innerHTML=` <div class="app-header"><h1>Messages</h1><div class="subtitle">Groupe Ensemble Vocal</div></div> ${pin?`<div class="pinned-msg"><span style="font-size:16px;flex-shrink:0">📌</span><div class="pin-text"><strong>Épinglé :</strong> ${pin.text.substring(0,80)}…</div></div>`:''} <div class="msg-list" id="msg-list"> ${messages.map(m=>`<div class="msg-bubble ${m.me?'me':'other'}">
-<div class="bubble-header">${!m.me?`<span>${m.author}</span>`:’’}<span>${m.time}</span></div>
-<div class="bubble">${m.text}</div>
-</div>`).join('')} </div> <div class="compose-bar"> <input class="compose-input" id="msg-in" type="text" placeholder="Écrire…" onkeydown="if(event.key==='Enter')sendMsg()"> <button class="send-btn" onclick="sendMsg()">➤</button> </div>`;
-const v=document.getElementById(‘view-messages’);
-setTimeout(()=>{if(v)v.scrollTop=v.scrollHeight;},50);
+  const pin=messages.find(m=>m.pinned);
+  document.getElementById('view-messages').innerHTML=`
+    <div class="app-header"><h1>Messages</h1><div class="subtitle">Groupe Ensemble Vocal</div></div>
+    ${pin?`<div class="pinned-msg"><span style="font-size:16px;flex-shrink:0">📌</span><div class="pin-text"><strong>Épinglé :</strong> ${pin.text.substring(0,80)}…</div></div>`:''}
+    <div class="msg-list" id="msg-list">
+      ${messages.map(m=>`<div class="msg-bubble ${m.me?'me':'other'}">
+        <div class="bubble-header">${!m.me?`<span>${m.author}</span>`:''}<span>${m.time}</span></div>
+        <div class="bubble">${m.text}</div>
+      </div>`).join('')}
+    </div>
+    <div class="compose-bar">
+      <input class="compose-input" id="msg-in" type="text" placeholder="Écrire…" onkeydown="if(event.key==='Enter')sendMsg()">
+      <button class="send-btn" onclick="sendMsg()">➤</button>
+    </div>`;
+  const v=document.getElementById('view-messages');
+  setTimeout(()=>{if(v)v.scrollTop=v.scrollHeight;},50);
 }
-function sendMsg(){const i=document.getElementById(‘msg-in’),t=i?.value.trim();if(!t)return;messages.push({id:messages.length+1,author:‘Moi’,me:true,time:‘Maintenant’,text:t});i.value=’’;renderMessages();}
+function sendMsg(){const i=document.getElementById('msg-in'),t=i?.value.trim();if(!t)return;messages.push({id:messages.length+1,author:'Moi',me:true,time:'Maintenant',text:t});i.value='';renderMessages();}
 
 // ── HELPERS ───────────────────────────────────────────────────────────
-function fmtDate(s){return new Date(s).toLocaleDateString(‘fr-FR’,{weekday:‘short’,day:‘numeric’,month:‘long’,year:‘numeric’});}
-function openModal(h){document.getElementById(‘modal-content’).innerHTML=h;document.getElementById(‘modal’).classList.add(‘open’);}
-function closeModalFn(){document.getElementById(‘modal’).classList.remove(‘open’);}
-function closeModal(e){if(e.target===document.getElementById(‘modal’))closeModalFn();}
-function dlFile(url,name){if(!url)return;const a=document.createElement(‘a’);a.href=url;a.download=name;a.target=’_blank’;document.body.appendChild(a);a.click();document.body.removeChild(a);}
-function showToast(msg){let t=document.getElementById(‘toast’);if(!t){t=document.createElement(‘div’);t.id=‘toast’;t.style.cssText=‘position:fixed;bottom:calc(var(–nav-h) + var(–safe-bottom) + 80px);left:50%;transform:translateX(-50%);background:var(–dark3);border:1px solid var(–border);color:var(–text);padding:10px 20px;border-radius:22px;font-size:13px;z-index:500;white-space:nowrap;opacity:0;transition:opacity .2s’;document.body.appendChild(t);}t.textContent=msg;t.style.opacity=1;clearTimeout(t._t);t._t=setTimeout(()=>t.style.opacity=0,2500);}
+function fmtDate(s){return new Date(s).toLocaleDateString('fr-FR',{weekday:'short',day:'numeric',month:'long',year:'numeric'});}
+function openModal(h){document.getElementById('modal-content').innerHTML=h;document.getElementById('modal').classList.add('open');}
+function closeModalFn(){document.getElementById('modal').classList.remove('open');}
+function closeModal(e){if(e.target===document.getElementById('modal'))closeModalFn();}
+function dlFile(url,name){if(!url)return;const a=document.createElement('a');a.href=url;a.download=name;a.target='_blank';document.body.appendChild(a);a.click();document.body.removeChild(a);}
+function showToast(msg){let t=document.getElementById('toast');if(!t){t=document.createElement('div');t.id='toast';t.style.cssText='position:fixed;bottom:calc(var(--nav-h) + var(--safe-bottom) + 80px);left:50%;transform:translateX(-50%);background:var(--dark3);border:1px solid var(--border);color:var(--text);padding:10px 20px;border-radius:22px;font-size:13px;z-index:500;white-space:nowrap;opacity:0;transition:opacity .2s';document.body.appendChild(t);}t.textContent=msg;t.style.opacity=1;clearTimeout(t._t);t._t=setTimeout(()=>t.style.opacity=0,2500);}
 function showAddMember(){openModal(`<h2>Nouveau choriste</h2><div style="display:flex;flex-direction:column;gap:12px;margin-top:16px"><input class="url-input" placeholder="Prénom Nom"><select style="background:var(--dark3);border:1px solid var(--border);color:var(--text);padding:10px 14px;border-radius:var(--radius-sm);font-family:var(--font-sans);font-size:14px;outline:none"><option>Soprano</option><option>Alto</option><option>Ténor</option><option>Baryton</option><option>Basse</option></select><input class="url-input" placeholder="Téléphone"><input class="url-input" placeholder="Email"><button class="btn-sm primary" style="padding:12px" onclick="showToast('Choriste ajouté !')">✅ Ajouter</button></div>`);}
 function showAddPiece(){openModal(`<h2>Nouvelle œuvre</h2><div style="display:flex;flex-direction:column;gap:12px;margin-top:16px"><input class="url-input" placeholder="Titre"><input class="url-input" placeholder="Compositeur"><input class="url-input" placeholder="URL Partition PDF (SharePoint)"><input class="url-input" placeholder="URL MP3"><input class="url-input" placeholder="URL MIDI"><button class="btn-sm primary" style="padding:12px" onclick="showToast('Œuvre ajoutée !')">✅ Ajouter</button></div>`);}
 
 // ── PWA ───────────────────────────────────────────────────────────────
 let deferredPrompt=null;
-window.addEventListener(‘beforeinstallprompt’,e=>{e.preventDefault();deferredPrompt=e;document.getElementById(‘install-banner’).classList.add(‘show’);});
-async function installApp(){if(!deferredPrompt)return;deferredPrompt.prompt();deferredPrompt=null;document.getElementById(‘install-banner’).classList.remove(‘show’);}
-window.addEventListener(‘appinstalled’,()=>document.getElementById(‘install-banner’).classList.remove(‘show’));
-if(‘serviceWorker’in navigator)navigator.serviceWorker.register(‘sw.js’).catch(()=>{});
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;document.getElementById('install-banner').classList.add('show');});
+async function installApp(){if(!deferredPrompt)return;deferredPrompt.prompt();deferredPrompt=null;document.getElementById('install-banner').classList.remove('show');}
+window.addEventListener('appinstalled',()=>document.getElementById('install-banner').classList.remove('show'));
+if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
 
-navigate(‘dashboard’);
+navigate('dashboard');
 </script>
-
 </body>
 </html>
