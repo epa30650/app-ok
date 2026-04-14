@@ -358,11 +358,10 @@ function showMemberDetail(id){
 
 // ── RÉPERTOIRE ────────────────────────────────────────────────────────
 function renderRepertoire(){
-  const statuses=['Maîtrisé','En apprentissage','À travailler'];
   document.getElementById('view-repertoire').innerHTML=`
     <div class="app-header"><h1>Répertoire</h1><div class="subtitle">${DATA.pieces.length} œuvres</div></div>
-    <div class="search-bar"><span class="search-icon">🔍</span><input type="text" placeholder="Titre, compositeur…"></div>
-    ${statuses.map(s=>{const ps=DATA.pieces.filter(p=>p.status===s);return ps.length?`<div class="section"><div class="section-title">${s} <span class="count">${ps.length}</span></div></div>${ps.map(p=>pieceCardHTML(p)).join('')}`:''}).join('')}
+    <div class="search-bar"><span class="search-icon">🔍</span><input type="text" placeholder="Titre…" oninput="filterPieces(this.value)"></div>
+    <div id="pieces-list">${DATA.pieces.map(p=>pieceCardHTML(p)).join('')}</div>
     <button class="fab" onclick="showAddPiece()">➕</button>`;
 }
 function pieceCardHTML(p){
